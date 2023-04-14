@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+.custom_selector{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: #888;
+}
+
+.custom_selector select{
+    min-height: 35px;
+    background-color: #cbe7ff;
+    border-radius: 3px;
+    border: 2px solid #2196f3;
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    appearance: none;
+}
+
+.custom_selector::after{
+    content: '';
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #000;
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.custom_selector .selector_options{
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    background: #11436b;
+    border-radius: 3px;
+    z-index: 1;
+    width: 96%;
+    position: absolute;
+    top: 35%;
+    left: 2%;
+}
+
+.custom_selector .selector_options li{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: background .3s ease;
+}
+
+.custom_selector .selector_options li:hover{
+    background: #03a9f4;
+}
